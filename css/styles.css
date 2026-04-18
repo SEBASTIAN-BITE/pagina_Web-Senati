@@ -1,0 +1,203 @@
+/* ========== ESTILO COMPLETAMENTE NUEVO ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0a0f;
+  font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
+  color: #eef2ff;
+}
+
+/* Navbar estilo glassmorphism oscuro */
+.navbar {
+  background: rgba(10, 10, 20, 0.85) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(139, 92, 246, 0.3);
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #a855f7, #3b82f6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  letter-spacing: -0.5px;
+}
+
+.navbar-nav .nav-link {
+  color: #cbd5e6 !important;
+  font-weight: 500;
+  margin: 0 0.5rem;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #a855f7 !important;
+  transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #a855f7, #3b82f6);
+  transition: width 0.3s;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-toggler {
+  border-color: #8b5cf6;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Hero con gradiente dramático y patrón flotante */
+.hero {
+  height: 85vh;
+  background: radial-gradient(circle at 30% 10%, rgba(139, 92, 246, 0.15), rgba(0, 0, 0, 0.95)),
+              linear-gradient(125deg, #0f0c1f 0%, #1a1a2e 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 800' opacity='0.1'%3E%3Cpath fill='none' stroke='%238b5cf6' stroke-width='1.5' d='M400 100 L700 400 L400 700 L100 400 Z M400 200 L550 400 L400 600 L250 400 Z M400 300 L475 400 L400 500 L325 400 Z'/%3E%3Ccircle cx='400' cy='400' r='20' fill='%238b5cf6'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 60px;
+  animation: floatBg 80s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes floatBg {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(50px, 50px) rotate(5deg); }
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff, #c084fc, #60a5fa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+  letter-spacing: -1px;
+}
+
+.hero .lead {
+  font-size: 1.4rem;
+  color: #a5b4fc;
+  font-weight: 400;
+}
+
+/* Botón con efecto glow */
+.btn-glow {
+  background: linear-gradient(95deg, #8b5cf6, #3b82f6);
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 12px 32px;
+  border-radius: 50px;
+  transition: all 0.3s;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+}
+
+.btn-glow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.8);
+  background: linear-gradient(95deg, #7c3aed, #2563eb);
+  color: white;
+}
+
+/* Tarjetas estilo vidrio */
+.custom-card {
+  background: rgba(20, 20, 35, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  border-radius: 28px;
+  transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  overflow: hidden;
+}
+
+.custom-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  border-color: rgba(139, 92, 246, 0.6);
+  box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(139, 92, 246, 0.2);
+  background: rgba(25, 25, 45, 0.85);
+}
+
+.card-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  background: linear-gradient(120deg, #e0e7ff, #c084fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+}
+
+.card-body p {
+  color: #b9c3e6;
+  font-size: 1rem;
+}
+
+/* Footer elegante */
+footer {
+  background: linear-gradient(180deg, #0a0a0f 0%, #030308 100%);
+  border-top: 1px solid rgba(139, 92, 246, 0.2);
+  margin-top: 3rem;
+  padding: 2rem !important;
+}
+
+footer p {
+  color: #7e8bb6;
+  letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+  .hero {
+    height: 70vh;
+  }
+  .custom-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#8b5cf6, #3b82f6);
+  border-radius: 10px;
+}

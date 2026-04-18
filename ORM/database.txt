@@ -1,0 +1,3 @@
+#BD=BDTIENDA
+#USUARIO=user-app
+#CLAVE=s@125m_&5?wp02
